@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>::To do List ::</title>
+    <style>
+        body {
+            background-color: rgb(220,220,220);
+        }
+        .header{
+            background-color: mediumaquamarine;
+            border-radius: 0px 0px 7px 7px;
+            height: 100px;
+            
+        }
+        input {
+            margin: auto;
+        }
+        .contents {
+            margin-top: 10px;
+        }
+        .task {
+            background-color: white;
+            border-radius: 7px;
+            height: 60px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <input type="text" placeholder="Enter an activity.." id="taskContent">
+        <input type="submit" onclick="addTask()" value="plus" >    
+    </div>
+    
+    <div id="contents">
+        <div class="task">asd asd</div>
+    </div>
+    
+    <script>
+        function addTask() {
+            var taskCon = document.getElementById('taskContent').value;
+            console.log(taskCon);
+            
+            var contents =  document.getElementById("contents");
+            console.log(contents);
+            
+            var makeDiv = document.createElement("div");
+            var node = document.createTextNode(taskCon);
+            makeDiv.classList.add("task");
+            makeDiv.appendChild(node);
+            contents.appendChild(makeDiv);
+        }
+    </script>
+</body>
+
+
+
+</html> 
