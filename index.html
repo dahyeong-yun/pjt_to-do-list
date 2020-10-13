@@ -37,24 +37,8 @@
     <div id="contents">
         <div class="task">asd asd</div>
     </div>
-    
-    <script>
-        function addTask() {
-            var taskCon = document.getElementById('taskContent').value;
-            console.log(taskCon);
-            
-            var contents =  document.getElementById("contents");
-            console.log(contents);
-            
-            var makeDiv = document.createElement("div");
-            var node = document.createTextNode(taskCon);
-            makeDiv.classList.add("task");
-            makeDiv.appendChild(node);
-            contents.appendChild(makeDiv);
-        }
-    </script>
+    <!-- External Script -->
+    <script src="vendor/js/jquery-3.5.1.js"></script>
+    <script src="static/js/main.js"></script>
 </body>
-
-
-
 </html> 
